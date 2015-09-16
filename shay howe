@@ -1,0 +1,99 @@
+Shay Howe notes
+
+Chapter 1:
+
+<link rel="stylesheet" href="path.css">
+font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+
+Reset css:
+http://meyerweb.com/eric/tools/css/reset/
+
+Normalize css:
+http://necolas.github.io/normalize.css/
+
+
+Chapter 2:
+
+Can wrap block or inline elements
+<header> <footer>
+<section> = thematic group of content
+<article> = independent content
+<aside> = sidebar, left or right of page
+
+Send email link:
+<a href="mailto:shay@awesome.com?subject=Reaching%20Out&body=How%20are%20you">Email Me</a>
+
+Open page in new tab:
+<a href="http://shayhowe.com/" target="_blank">Shay Howe</a>
+
+Link to top:
+<body id="top"> ...
+  <a href="#top">Back to top</a> ...
+</body>
+
+
+Chapter 3:
+
+The most right selector is the key selector (the one where the styling gets applied)
+All selectors to the left are just prequalifiers
+We generally only use classes to style
+
+
+Chapter 4:
+
+display: block, inline-block, inline, none
+inline-block: accept box-model properties but remain inline (accept width, height, etc)
+width/height: determined by display property, by content of the elements, or by width/height properties
+width height padding border margin
+block-level default width = 100%, default height = dependent on height
+inline/inline-block = expand/contract to content
+width and height only relevant to non-inline elements
+inline elements don't accept: width, height, margin-top, margin-bottom
+inline elements padding-top, padding-bottom may bleed into other elements above and below
+background-color of element -> padding, parent -> margin
+
+box-sizing: content-box, padding-box, border-box // changes box sizing calculation
+-moz-, -ms-, -webkit-
+
+
+Chapter 5:
+
+float: left, right
+clear: left, right, both
+.group:before, .group:after { content: ""; display: table; }
+.group:after { clear: both; }
+.group { clear: both; *zoom: 1; }
+inline-block with comments in between for laying out grids
+position: static (default), relative, absolute
+relative = preserved original position
+absolute = doesn't preserve original position -- takes first relative parent position
+
+
+Chapter 6:
+
+font-size, line-height, font-weight, text-decoration, text-indent, text-shadow, box-shadow, letter-spacing, word-spacing, text-align
+Learn how to style by looking at good websites
+
+
+Chapter 7:
+
+background-image: url("alert.png");
+background-position: 20px 10px;
+background-repeat: no-repeat;
+
+<div class="notice-success">
+  Woo hoo! Congratulations, you did it!
+</div>
+.notice-success {
+  background: #67b11c url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/tick_2.png") 20px 50% no-repeat;
+  background: #67b11c url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/tick_1.svg") 20px 50% no-repeat;
+  border: 2px solid #467813;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 15px 20px 15px 50px;
+}
+
+
+Chapter 8:
+
